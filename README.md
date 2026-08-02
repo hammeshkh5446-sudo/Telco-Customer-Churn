@@ -1,5 +1,35 @@
 #  Telco Customer Churn Prediction
 
+> Machine Learning project for predicting customer churn using multiple classification models.
+
+## 🚀 Live Demo
+
+👉 [Launch the Streamlit App](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
+
+##  Project Structure
+
+```text
+Telco-Customer-Churn/
+├── .streamlit/
+├── data/
+├── models/
+├── reports/
+├── src/
+├── app.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+##  Project Highlights
+
+- Customer churn prediction
+- Data cleaning & preprocessing
+- Exploratory Data Analysis
+- Multiple Machine Learning models
+- Model evaluation
+- Power BI dashboard
+- Interactive Streamlit web application#  Telco Customer Churn Prediction
+
 An end-to-end Machine Learning and Business Intelligence project that analyzes customer churn behavior and predicts whether a telecom customer is likely to churn.
 
 The project combines **Python, Machine Learning, Power BI, and Streamlit** to provide both predictive insights and an interactive business dashboard.
