@@ -392,8 +392,10 @@ except FileNotFoundError:
         f"`{MODEL_PATH}`"
     )
     st.stop()
-except Exception as exc:
-    st.error(f"The model could not be loaded: {exc}")
+except Exception:
+    import traceback
+    st.error("The model could not be loaded.")
+    st.code(traceback.format_exc())
     st.stop()
 
 
