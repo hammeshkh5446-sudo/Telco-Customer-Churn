@@ -6,9 +6,24 @@
 
 > Machine Learning project for predicting customer churn using multiple classification models.
 
+## Project Overview
+
+An end-to-end Machine Learning project that predicts customer churn using customer demographic, service, contract, and billing information.
+
+### Key Features
+
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Multiple classification models
+- Model evaluation
+- Customer churn prediction
+- Interactive Streamlit application
+- Power BI dashboard
+- Saved ML prediction pipeline
+
+
 ##  Project Structure
 
-```text
 Telco-Customer-Churn/
 ├── .streamlit/
 ├── data/
