@@ -1,10 +1,10 @@
 #  Telco Customer Churn Prediction
 
+##  Live Demo
+
+> [Launch the Telco Customer Churn Prediction App](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
+
 > Machine Learning project for predicting customer churn using multiple classification models.
-
-## 🚀 Live Demo
-
-👉 [Launch the Streamlit App](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
 
 ##  Project Structure
 
