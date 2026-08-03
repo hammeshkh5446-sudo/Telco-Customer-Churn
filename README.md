@@ -1,70 +1,88 @@
 #  Telco Customer Churn Prediction
 
+An end-to-end Machine Learning project that predicts customer churn using customer demographics, services, contract information, and billing data.
+
+This project combines Machine Learning, Exploratory Data Analysis, Power BI, and Streamlit into a complete data science workflow.
+
 ##  Live Demo
 
-> [Launch the Telco Customer Churn Prediction App](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
+ [Launch the Telco Customer Churn Prediction App](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
 
-> Machine Learning project for predicting customer churn using multiple classification models.
+---
 
-## Project Overview
+##  Project Overview
 
-An end-to-end Machine Learning project that predicts customer churn using customer demographic, service, contract, and billing information.
+Customer churn is a major challenge for subscription-based businesses. Predicting which customers are likely to leave can help organizations take proactive retention measures.
+
+This project develops a machine learning solution to identify customers who are at risk of churn and provides an interactive web application for making predictions.
 
 ### Key Features
 
 - Data cleaning and preprocessing
 - Exploratory Data Analysis (EDA)
+- Feature preparation and encoding
 - Multiple classification models
-- Model evaluation
-- Customer churn prediction
+- Model evaluation and comparison
+- Machine Learning prediction pipeline
 - Interactive Streamlit application
-- Power BI dashboard
-- Saved ML prediction pipeline
-
-
-##  Project Structure
-
-Telco-Customer-Churn/
-├── .streamlit/
-├── data/
-├── models/
-├── reports/
-├── src/
-├── app.py
-├── README.md
-├── requirements.txt
-└── .gitignore
-
-
-##  Project Highlights
-
-- Customer churn prediction
-- Data cleaning & preprocessing
-- Exploratory Data Analysis
-- Multiple Machine Learning models
-- Model evaluation
-- Power BI dashboard
-- Interactive Streamlit web application#  Telco Customer Churn Prediction
-
-An end-to-end Machine Learning and Business Intelligence project that analyzes customer churn behavior and predicts whether a telecom customer is likely to churn.
-
-The project combines **Python, Machine Learning, Power BI, and Streamlit** to provide both predictive insights and an interactive business dashboard.
+- Power BI business intelligence dashboard
+- Visual analysis of customer churn patterns
 
 ---
 
-##  Power BI Dashboard
+##  Business Problem
 
-An interactive Power BI dashboard was developed to analyze customer churn patterns and identify important business insights.
+The objective is to predict whether a customer is likely to churn based on information such as:
 
-### Dashboard Preview
+- Customer demographics
+- Tenure
+- Contract type
+- Internet service
+- Payment method
+- Monthly charges
+- Total charges
+- Additional services
 
-![Telco Customer Churn Power BI Dashboard](reports/Telco_Churn_Dashboard.PNG)
+The model can help businesses identify high-risk customers and support data-driven customer retention strategies.
 
-The complete Power BI dashboard file is available in the `reports/` folder.
+---
 
-## 📈 Exploratory Data Analysis
+##  Dataset
 
-The project includes multiple visualizations to explore customer behavior and churn patterns.
+The project uses the Telco Customer Churn dataset containing customer demographic, service, contract, and billing information.
+
+### Target Variable
+
+**Churn**
+
+- `Yes` → Customer churned
+- `No` → Customer remained
+
+The dataset was cleaned and prepared before model training.
+
+---
+
+##  Data Preprocessing
+
+The preprocessing workflow included:
+
+- Handling missing values
+- Converting `TotalCharges` into numeric format
+- Removing unnecessary identifiers such as `customerID`
+- Encoding categorical variables
+- Separating features and target variable
+- Splitting data into training and testing sets
+- Preparing the data for machine learning models
+
+---
+
+##  Exploratory Data Analysis
+
+Exploratory Data Analysis was performed to understand customer behavior and identify patterns associated with churn.
+
+The analysis includes visualizations covering customer churn, contracts, tenure, charges, and feature relationships.
+
+### EDA Visualizations
 
 ![EDA Visualization 1](reports/figures/churn_distribution.png)
 
@@ -76,93 +94,209 @@ The project includes multiple visualizations to explore customer behavior and ch
 
 ![EDA Visualization 5](reports/figures/tenure_vs_churn.png)
 
-
-##  Project Detail
-
-Customer churn is one of the major challenges faced by telecommunications companies. Losing customers directly affects revenue and increases the cost of acquiring new customers.
-
-This project analyzes telecom customer data to:
-
-- Identify factors associated with customer churn
-- Perform data cleaning and exploratory data analysis
-- Train machine learning models for churn prediction
-- Build a reusable prediction pipeline
-- Create an interactive Power BI dashboard
-- Develop a Streamlit web application for predictions
-
-The goal is to demonstrate a complete **end-to-end Data Science workflow** from raw data to business insights and deployment.
+> The complete set of visualization figures is available in `reports/figures/`.
 
 ---
 
-##  Business Problem
+##  Power BI Dashboard
 
-Telecom companies need to identify customers who are likely to leave their services.
+An interactive Power BI dashboard was created to analyze customer churn from a business intelligence perspective.
 
-The objective of this project is to develop a machine learning solution that can:
+The dashboard provides insights into:
 
-1. Analyze customer characteristics and service usage.
-2. Identify patterns associated with churn.
-3. Predict potential customer churn.
-4. Present business insights through an interactive dashboard.
-5. Provide a simple interface for customer-level predictions.
-
----
-
-##  Dataset
-
-The project uses a Telco Customer Churn dataset containing customer demographic information, subscribed services, account information, and churn status.
-
-### Major Data Categories
-
+- Overall customer churn
 - Customer demographics
-- Gender and senior citizen information
-- Partner and dependent status
+- Contract types
+- Service usage
 - Tenure
-- Phone and internet services
-- Contract type
-- Payment method
 - Monthly charges
-- Total charges
-- Churn status
+- Customer behavior patterns
 
-### Target Variable
+### Dashboard Preview
 
-**Churn**
+![Telco Customer Churn Power BI Dashboard](reports/Telco_churn_Dashbaord.PNG)
 
-- `Yes` → Customer left the company
-- `No` → Customer remained with the company
+The complete Power BI dashboard file is available in the `reports/` directory.
 
 ---
 
-##  Data Preprocessing
+##  Machine Learning
 
-The dataset was prepared before machine learning using several preprocessing steps:
+Multiple classification algorithms were evaluated for the churn prediction task.
 
-- Converted `TotalCharges` into numeric format
-- Handled missing values
-- Removed unnecessary identifier columns
-- Encoded categorical variables
-- Separated features and target variable
-- Split the dataset into training and testing sets
-- Prepared the data for machine learning models
+### Models Used
+
+| Model | Purpose |
+|---|---|
+| Logistic Regression | Baseline classification model |
+| Decision Tree Classifier | Rule-based classification |
+| Random Forest Classifier | Ensemble learning |
+| Gradient Boosting Classifier | Boosting-based classification |
+
+The selected model was integrated into a reusable prediction pipeline and used by the Streamlit application.
 
 ---
 
-##  Exploratory Data Analysis
+##  Model Evaluation
 
-Exploratory Data Analysis was performed to understand customer behavior and identify relationships between customer characteristics and churn.
+The models were evaluated using standard classification metrics including:
 
-The analysis includes:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
 
-- Churn distribution
-- Customer tenure analysis
-- Contract analysis
-- Payment method analysis
-- Service usage analysis
-- Customer demographic analysis
-- Numerical feature analysis
+The evaluation process was used to compare model performance and select a suitable model for deployment.
 
-Visualizations generated during the analysis are available in:
+---
 
-```text
-reports/figures/
+##  Streamlit Application
+
+The trained prediction pipeline was integrated into an interactive Streamlit application.
+
+Users can enter customer information and receive a churn prediction through the deployed application.
+
+### Application Features
+
+- Interactive customer input form
+- Real-time churn prediction
+- Machine learning pipeline integration
+- User-friendly interface
+- Deployed online using Streamlit
+
+ [Open Live Application](https://telco-customer-churn-odxghtzssr7vln88vckrpz.streamlit.app/)
+
+---
+
+##  Project Structure
+
+
+Telco-Customer-Churn/
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── data/
+│   └── Telco Customer Churn Dataset
+│
+├── models/
+│   └── churn_prediction_pipeline.pkl
+│
+├── reports/
+│   ├── figures/
+│   │   ├── EDA visualization 1
+│   │   ├── EDA visualization 2
+│   │   ├── EDA visualization 3
+│   │   ├── EDA visualization 4
+│   │   └── EDA visualization 5
+│   │
+│   ├── Power BI Dashboard (.pbix)
+│   └── Telco_churn_Dashbaord.PNG
+│
+├── src/
+│   ├── data_loading.py
+│   ├── eda.py
+│   ├── prediction.py
+│   └── trainmodel.py
+│
+├── app.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+## Tech Stack
+
+Programming
+Python
+Data Analysis
+Pandas
+NumPy
+Data Visualization
+Matplotlib
+Seaborn
+Power BI
+Machine Learning
+Scikit-learn
+Logistic Regression
+Decision Tree
+Random Forest
+Gradient Boosting
+Deployment
+Streamlit
+Joblib
+Development Tools
+Jupyter Notebook
+VS Code
+Git
+GitHub
+
+## Installation
+
+Clone the repository:
+
+git clone https://github.com/hammeshkh5446-sudo/Telco-Customer-Churn.git
+
+Navigate to the project directory:
+
+cd Telco-Customer-Churn
+
+Install the required dependencies:
+
+pip install -r requirements.txt
+
+Run the Streamlit application:
+
+streamlit run app.py
+
+##  Project Workflow
+
+Raw Dataset
+     ↓
+Data Cleaning
+     ↓
+Exploratory Data Analysis
+     ↓
+Feature Preparation
+     ↓
+Train/Test Split
+     ↓
+Model Training
+     ↓
+Model Evaluation
+     ↓
+Best Model / Pipeline
+     ↓
+Streamlit Deployment
+     ↓
+Customer Churn Prediction
+
+## Future Improvements
+
+Possible future improvements include:
+
+Hyperparameter tuning
+Cross-validation
+Advanced feature engineering
+Model explainability using SHAP
+Improved prediction interface
+Automated model monitoring
+Cloud-based data pipeline
+Customer retention recommendation system
+
+## Author
+
+M. Hammad Shahbaz
+
+Software Engineering Undergraduate | Aspiring Data Scientist
+
+Areas of Interest
+Data Science
+Machine Learning
+Data Analysis
+Data Visualization
+Business Intelligence
+
+## Project
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
