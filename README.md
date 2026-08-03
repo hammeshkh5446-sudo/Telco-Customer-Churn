@@ -114,7 +114,7 @@ The dashboard provides insights into:
 
 ### Dashboard Preview
 
-![Telco Customer Churn Power BI Dashboard](reports/Telco_churn_Dashbaord.PNG)
+![Telco Customer Churn Power BI Dashboard](reports/Telco_Churn_Dashbaord.PNG)
 
 The complete Power BI dashboard file is available in the `reports/` directory.
 
