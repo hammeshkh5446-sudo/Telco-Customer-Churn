@@ -58,7 +58,7 @@ An interactive Power BI dashboard was developed to analyze customer churn patter
 
 ### Dashboard Preview
 
-![Telco Customer Churn Power BI Dashboard](./reports/Telco_Churn_Dashbaord.png)
+![Telco Customer Churn Power BI Dashboard](reports/Telco_Churn_Dashboard.PNG)
 
 The complete Power BI dashboard file is available in the `reports/` folder.
 
