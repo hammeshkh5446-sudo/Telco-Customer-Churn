@@ -35,6 +35,7 @@ Telco-Customer-Churn/
 ├── requirements.txt
 └── .gitignore
 
+
 ##  Project Highlights
 
 - Customer churn prediction
@@ -51,7 +52,32 @@ The project combines **Python, Machine Learning, Power BI, and Streamlit** to pr
 
 ---
 
-##  Project Overview
+##  Power BI Dashboard
+
+An interactive Power BI dashboard was developed to analyze customer churn patterns and identify important business insights.
+
+### Dashboard Preview
+
+![Telco Customer Churn Power BI Dashboard](reports/Telco_churn_Dashbaord.PNG)
+
+The complete Power BI dashboard file is available in the `reports/` folder.
+
+## 📈 Exploratory Data Analysis
+
+The project includes multiple visualizations to explore customer behavior and churn patterns.
+
+![EDA Visualization 1](reports/figures/churn_distribution.png)
+
+![EDA Visualization 2](reports/figures/contract_vs_churn.png)
+
+![EDA Visualization 3](reports/figures/correlation_heatmap.png)
+
+![EDA Visualization 4](reports/figures/monthly_charges_vs_churn.png)
+
+![EDA Visualization 5](reports/figures/tenure_vs_churn.png)
+
+
+##  Project Detail
 
 Customer churn is one of the major challenges faced by telecommunications companies. Losing customers directly affects revenue and increases the cost of acquiring new customers.
 
