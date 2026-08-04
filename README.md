@@ -171,7 +171,7 @@ Users can enter customer information and receive a churn prediction through the 
 
 ##  Project Structure
 
-
+```text
 Telco-Customer-Churn/
 │
 ├── .streamlit/
@@ -204,7 +204,7 @@ Telco-Customer-Churn/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 ## Tech Stack
 
 Programming
